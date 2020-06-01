@@ -29,7 +29,7 @@ def csv_to_data(csv_file, bit_depth_idx=1, data_idx=7, base=16, dtype=np.int16):
     else:
         raise AttributeError
 
-    y = np.fromiter(map(hexstr_to_signed_int16, rawHex[data_idx:]), dtype=dtype)
+    y = np.fromiter(map(func, rawHex[data_idx:]), dtype=dtype)
 
     return y, bit_depth
 
