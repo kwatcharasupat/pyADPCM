@@ -11,14 +11,14 @@ def hexstr_to_signed_int16(hexstr):
     return value
 
 
-def csv_to_data(csv_file, bit_depth_idx=1, data_idx=7, base=16, dtype=np.int16):
+def csv_to_data(csv_file, bit_depth_idx=1, data_idx=7, base=16, dtype=np.int16, fieldnames=["x","y"]):
     """ Convert raw CSV file into a numpy array of data """
     rawHex = []
     with open(csv_file, newline="") as csvfile:
-        reader = csv.DictReader(csvfile, fieldnames=["x", "y"])
+        reader = csv.DictReader(csvfile, fieldnames=fieldnames)
 
         for r in reader:
-            rawHex.append(r["y"])
+            rawHex.append(r[fieldnames[-1]])
 
     bit_depth = int(rawHex[bit_depth_idx].strip("bit"))
 
