@@ -1,2 +1,2 @@
 # pyADPCM
-# Python Implementation of the Adaptive Differential Pulse Code Modulation
+Python Implementation of the Adaptive Differential Pulse Code Modulation
