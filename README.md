@@ -5,13 +5,13 @@ Python Implementation of the Adaptive Differential Pulse Code Modulation
 ## Dependencies
 ```
 numpy
-wavio
 ```
 
 ## How to use
 
 ```
 from adpcm import ADPCM
+import numpy as np
 
 adpcm = ADPCM()
 
